@@ -11,7 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="h-[100%]">{children}</body>
+      <body className="h-[100%] bg-pantry-image bg-[100%,100%] bg-no-repeat">{children}</body>
     </html>
   )
 }
