@@ -8,3 +8,8 @@
     margin: 0;
 }
 
+body{
+    @media (max-width) {
+        
+    }
+}
