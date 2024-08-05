@@ -36,7 +36,7 @@ const SignUp = () => {
                     onChange={(e) => setPassword(e.target.value)}
                 />
                 <Button variant="contained" onClick={handleSignUp}>Sign Up</Button>
-                {/*<div><Link href='/login'> Login?</Link></div>*/}
+                <div><Link href='/login'> Login?</Link></div>
             </div>
         </div>
     )
