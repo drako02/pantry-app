@@ -46,16 +46,18 @@ const Home = () => {
 
     useEffect(() => {
         const fetchItems = async () => {
-            if (!user) {
-                setLoading(true);
-            } else {
+            if (user) {
                 const fetchedItems = await getItems(user.uid);
                 setItems(fetchedItems);
-                setLoading(false); // Set loading to false after fetching items
+                setLoading(false);
             }
         };
 
-        fetchItems();
+        if (user) {
+            fetchItems();
+        } else {
+            setLoading(false); // Set loading to false if user is null
+        }
     }, [user]);
 
     useEffect(() => {
@@ -118,7 +120,7 @@ const Home = () => {
 
     return (
         <>
-            <AppBar className=" relative flex flex-row justify-between items-center px-[5%] bg-white font-sans text-[24px] h-[10%]  text-black ">
+            <AppBar className=" relative flex flex-row justify-between items-center px-[5%]  font-sans text-[24px] h-[10%] text-black ">
                 My Pantry
                 <div className="flex flex-col justify-between items-center border-[1px] rounded-[5px]">
                     <div>
