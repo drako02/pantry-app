@@ -120,15 +120,15 @@ const Home = () => {
 
     return (
         <>
-            <AppBar className=" relative flex flex-row justify-between items-center px-[5%]  font-sans text-[24px] h-[10%] text-black ">
+            <AppBar className=" !relative flex !flex-row justify-between items-center px-[5%]  font-sans text-[24px] h-[10%] text-black ">
                 My Pantry
-                <div className="flex flex-col justify-between items-center border-[1px] rounded-[5px]">
-                    <div>
+                <div className="flex justify-between items-center border-[1px] rounded-[5px]">
+                    <div className="flex justify-between items-center bg-white">
                         <Input type="text" className="w-[200px] h-[36px] focus-visible:outline-none text-[14px]"
-                            value={ searchQuery }
-                            onChange={ (e) => setSearchQuery(e.target.value) }
+                            // value={ searchQuery }
+                            // onChange={ (e) => setSearchQuery(e.target.value) }
                         />
-                        <Search />
+                        <Search className="text-black" />
                     </div>
                 </div>
             </AppBar>
